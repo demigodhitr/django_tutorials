@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News headlines</title>
+</head>
+<body>
+    <h1>Want to see todays news ? We've got the latest</h1>
+    <br><br>
+    {% for i in news %}
+    <a href="{% url 'overview' i.id %}">
+        <h2>{{i.title}}</h2>
+        <p>{{i.date_posted}}</p>
+    </a>
+    {% endfor %}
+</body>
+</html>
